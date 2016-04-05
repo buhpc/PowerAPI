@@ -10,10 +10,9 @@ cat $FLROOT/cpu0/cpufreq/scaling_available_frequencies
 
 # see http://www.thinkwiki.org/wiki/How_to_make_use_of_Dynamic_Frequency_Scaling
 
-# load the governors if compiled as modules
-# A governor sets the maximum frequency of the CPU
-# What is the difference between a governor and a frequency
-# Don't understand this line
+# Set a frequency=temporary
+# Governor: Max frequency -- Some algorithms refer to this value to scale other frequency values
+# Governor scales down 
 modprobe cpufreq_performance cpufreq_ondemand cpufreq_conservative cpufreq_powersave cpufreq_userspace
 
 echo "display available governors"
